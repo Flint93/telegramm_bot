@@ -94,7 +94,7 @@ def registation(message):
 @bot.message_handler(commands=['cat'])
 def start_command(message):
     #  отправляет пользователю в ответ на любой текст картинку с котиком
-    path = r'C:\Users\Flint\Desktop\stickers_cat'
+    path = r'\stickers_cat'
     data = os.listdir(path)
     image = random.choice(data)
     path_image = (f'{path}\{image}')
