@@ -4,6 +4,7 @@ COPY . .
 
 RUN pip install --user -r requirements.txt
 
-WORKDIR /app
+WORKDIR /
+ENV PYTHONPATH /
 
-CMD ['python', './telegramm_bot.py']
+CMD ["python", "./telegramm_bot.py"]
