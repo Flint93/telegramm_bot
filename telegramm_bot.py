@@ -94,10 +94,10 @@ def registation(message):
 @bot.message_handler(commands=['cat'])
 def start_command(message):
     #  отправляет пользователю в ответ на любой текст картинку с котиком
-    path = r'.\stickers_cat'
+    path = r'stickers_cat'
     data = os.listdir(path)
     image = random.choice(data)
-    path_image = (f'{path}\{image}')
+    path_image = (f'{path}/{image}')
     with open(path_image, 'rb') as f:
         bot.send_document(
             message.chat.id,
